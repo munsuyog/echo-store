@@ -35,9 +35,10 @@ async function insertPuzzles() {
 
       await pool.query(
         `INSERT INTO gobble_puzzles 
-        ( title, optimal_num_moves, fen, width, compound_fen, level_date, solution_path, created_date, updated_date)
+      ("DAILY_LEVEL_TYPE", "TITLE", "OPTIMAL_NUM_MOVES", "FEN", "WIDTH", "COMPOUND_FEN", "LEVEL_DATE", "SOLUTION_PATH", "CREATED_DATE", "UPDATED_DATE")
         VALUES ($1,$2,$3,$4,$5,$6,$7,$8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`,
         [
+          puzzle.daily_level_type,
           puzzle.title || "",
           puzzle.optimal_num_moves,
           puzzle.fen,
