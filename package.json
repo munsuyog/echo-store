@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.3"
+  }
+}
